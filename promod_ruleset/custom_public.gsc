@@ -8,12 +8,12 @@ main()
 	setDvar( "scr_sd_defusetime", 7 ); // [1->] (seconds)
 	setDvar( "scr_sd_multibomb", 0 ); // [0-1] (everyone can plant)
 	setDvar( "scr_sd_numlives", 1 ); // [0->] (amount of lives)
-	setDvar( "scr_sd_planttime", 5 ); // [1->] (seconds)
+	setDvar( "scr_sd_planttime", 6 ); // [1->] (seconds)
 	setDvar( "scr_sd_playerrespawndelay", 0 ); // [0->] (seconds)
 	setDvar( "scr_sd_roundlimit", 20 ); // [0->] (points)
 	setDvar( "scr_sd_roundswitch", 10 ); // [0->] (points)
 	setDvar( "scr_sd_scorelimit", 0 ); // [0->] (points)
-	setDvar( "scr_sd_timelimit", 1.75 ); // [0->] (minutes)
+	setDvar( "scr_sd_timelimit", 2 ); // [0->] (minutes)
 	setDvar( "scr_sd_waverespawndelay", 0 ); // [0->] (seconds)
 
 	// dom
@@ -75,7 +75,7 @@ main()
 	setDvar( "class_assault_limit", 64 );
 	setDvar( "class_specops_limit", 2 );
 	setDvar( "class_demolitions_limit", 1 );
-	setDvar( "class_sniper_limit", 1 );
+	setDvar( "class_sniper_limit", 3 );
 
 	setDvar( "class_assault_allowdrop", 1 );
 	setDvar( "class_specops_allowdrop", 1 );
@@ -205,25 +205,44 @@ main()
 	setDvar( "scr_game_matchstarttime", 10 ); // [0->] (seconds)
 	setDvar( "scr_enable_hiticon", 2 ); // [0-2] (disabled, hit icon on, hit icon on but not through walls)
 	setDvar( "scr_enable_scoretext", 1 ); // [0-1] (exp popups, +5 etc)
-	setDvar( "promod_allow_strattime", 0 ); // [0-1] (sd only)
+	setDvar( "promod_allow_strattime", 5 ); // [0-1] (sd only)
 	setDvar( "promod_allow_readyup", 0 ); // [0-1]
 	setDvar( "promod_kniferound", 0 ); // [0-1] (sd only)
 	setDvar( "g_maxDroppedWeapons", 16 ); // [2-32] (maximum number of dropped weapons before recycling)
 	setDvar( "scr_hardcore", 0 ); // [0-1]
 
 	// website
-	setDvar( "promod_hud_website", "www.codpromod.com" ); // (avoid "//" here)
+	setDvar( "promod_hud_website", "[AX]^3Promodlive" ); // (avoid "//" here)
 
 	// messagecenter
-	setDvar( "promod_mc_enable", 0 ); // [0-1]
+	
+	setDvar( "promod_mc_enable", 1 ); // [0-1]
 	setDvar( "promod_mc_rs_every_round", 0 ); // [0-1] (restarts messages on round-based gametypes)
-	setDvar( "promod_mc_delay", 45 ); // [1->] (default delay in seconds between messages)
-	setDvar( "promod_mc_loopdelay", 45 ); // [1->] (delay in seconds until it starting over)
-	setDvar( "promod_mc_maxmessages", 3 ); // [1->] (set this equivalent to number of messages)
-	setDvar( "promod_mc_message_1", "Message Center ON" );
-	setDvar( "promod_mc_message_2", "Set Me Up Or Turn Me OFF" );
-	setDvar( "promod_mc_message_3", "<*nextmap*>" );
-	setDvar( "promod_mc_messagedelay_1", 0 ); // [1->] (overrides default delay in seconds between messages, e.g special messages)
-	setDvar( "promod_mc_messagedelay_2", 0 );
-	setDvar( "promod_mc_messagedelay_3", 0 );
+	setDvar( "promod_mc_delay", 30 ); // [1->] (default delay in seconds between messages)
+	setDvar( "promod_mc_loopdelay", 30 ); // [1->] (delay in seconds until it starting over)
+	setDvar( "promod_mc_maxmessages", 8 ); // [1->] (set this equivalent to number of messages)
+	setDvar( "promod_mc_message_1", "^3Látogasd meg ^1TDM/ Zombi/Deahtrun ^7szervereinket is^7!" );
+	setDvar( "promod_mc_message_2", "Ne csalj, ne rontsd el mások ^5szórakozását^7!" );
+	setDvar( "promod_mc_message_3", "Jump: ^2on, ^7Elevator:^1off, ^7Káromkodás:^1off^7!" );
+	setDvar( "promod_mc_message_4", "weblapunk-->^5//www.alexc.hu/" );
+	setDvar( "promod_mc_message_5", "tgf:^1off!^7Probléma esetén(^5stream^7): hudito12" );
+	setDvar( "promod_mc_message_6", "^1A szerveren tilos káromkodni !" );
+	setDvar( "promod_mc_message_7", "<*nextmap*>" );
+	setDvar( "promod_mc_message_8", "^2Facebook--^1>AlexC Community ^2Like :)" 
+	//setDvar( "promod_mc_message_9", " :) " );
+	//setDvar( "promod_mc_message_10", "Bármiféle csalás ^1bann-t^7 von maga után^1!" );
+	//setDvar( "promod_mc_message_11", "Thanks for help: Kubu (szabto)!" );
+	//setDvar( "promod_mc_messagedelay_1", 0 ); // [1->] (overrides default delay in seconds between messages, e.g special messages)
+	//setDvar( "promod_mc_messagedelay_2", 0 );
+	//setDvar( "promod_mc_messagedelay_3", 0 );
+
+
+	//ĄX  CUSTOM DVARS
+	setDvar( "boys_def_timescale", 1 );
+	setDvar( "boys_mapvote_on", "mp_citystreets" );
+	setDvar( "boys_mapvote_skip", "mp_crash" );
+	setDvar( "boys_cusom_maps", "map mp_toujane_beta map mp_fav map mp_broadcast map mp_showdown map mp_cluster map mp_oldschool" );
+	setDvar( "boys_cusom_maps_count", 6 );
+	setDvar( "boys_damage_indicator", 0 );
+	setDvar( "boys_grenadecam", 1 );
 }
